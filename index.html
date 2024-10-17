@@ -4,106 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription Scène Ouverte</title>
+    
+    <!-- Inclusion de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Inclusion de la police Montserrat -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+
     <style>
-body {
-    background-color: #F5F5F5;
-    margin: 0;
-    padding: 20px;
-}
+        body {
+            background-color: #F5F5F5;
+            margin: 0;
+            padding: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
 
-h1 {
-    color: #333;
-    text-align: center;
-    font-family: Raleway, sans-serif;
-}
+        h1 {
+            color: #333;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+        }
 
-form {
-    background: #FDECF0;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 400px; /* Largeur du formulaire basée sur la proportion du nombre d'or */
-    max-width: calc(400px * 1.618); 
-    margin: auto;
-}
+        form {
+            background: #FDECF0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px; /* Largeur du formulaire basée sur la proportion du nombre d'or */
+            max-width: calc(400px * 1.618); 
+            margin: auto;
+        }
 
-div {
-    margin-bottom: 15px;
-}
+        div {
+            margin-bottom: 15px;
+        }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-family: Montserrat, sans-serif;
-}
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-family: 'Montserrat', sans-serif;
+        }
 
-input {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-    border: 1px solid #F5F5F5;
-    border-radius: 4px;
-}
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #F5F5F5;
+            border-radius: 4px;
+        }
 
-button {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    /* Largeur du bouton selon le nombre d'or */
-    width: 61.8%; 
-    font-family: Montserrat, sans-serif;
-}
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 61.8%; 
+            font-family: 'Montserrat', sans-serif;
+        }
 
-button:hover {
-    background-color: #0056b3;
-}
+        button:hover {
+            background-color: #0056b3;
+        }
 
-/* Media Query pour les écrans mobiles */
-@media (max-width: 600px) {
-    form {
-        width: 90%; /* Largeur maximale sur mobile */
-        padding: 10px; /* Réduire le padding sur mobile */
-    }
+        /* Media Query pour les écrans mobiles */
+        @media (max-width: 600px) {
+            form {
+                width: 90%; /* Largeur maximale sur mobile */
+                padding: 10px; /* Réduire le padding sur mobile */
+            }
 
-    button {
-        width: 100%; /* Bouton prend toute la largeur sur mobile */
-    }
+            button {
+                width: 100%; /* Bouton prend toute la largeur sur mobile */
+            }
 
-    input {
-        font-size: 16px; /* Augmenter la taille de la police sur mobile */
-    }
-}
-
+            input {
+                font-size: 16px; /* Augmenter la taille de la police sur mobile */
+            }
+        }
     </style>
 </head>
 <body>
     <h1>Inscription pour la Scène Ouverte</h1>
-    <form action="https://formspree.io/f/xkgnnyjw" method="POST">
+    <form>
         <div>
-            <label for="nom">Nom du groupe :</label>
-            <input type="text" id="nom" name="nom" required>
+            <label for="nom_groupe">
+                <i class="fas fa-users" style="margin-right: 5px;"></i>
+                Nom du groupe
+            </label>
+            <input type="text" id="nom_groupe" name="nom_groupe" required>
         </div>
+    
         <div>
-            <label for="style">Style musical :</label>
-            <input type="text" id="style" name="style" required>
+            <label for="style_musical">
+                <i class="fas fa-music" style="margin-right: 5px;"></i>
+                Style musical
+            </label>
+            <select id="style_musical" name="style_musical" required>
+                <option value="rock">Rock</option>
+                <option value="pop">Pop</option>
+                <option value="jazz">Jazz</option>
+                <option value="classique">Classique</option>
+                <option value="autre">Autre</option>
+            </select>
         </div>
+    
         <div>
-            <label for="email">Adresse e-mail :</label>
+            <label for="email">
+                <i class="fas fa-envelope" style="margin-right: 5px;"></i>
+                Adresse e-mail
+            </label>
             <input type="email" id="email" name="email" required>
         </div>
-        <div>
-            <button type="submit">Envoyer</button>
-        </div>
+    
+        <button type="submit">Envoyer</button>
     </form>
+    
+    <footer style="text-align: center; margin-top: 20px; font-size: 12px; color: #666;">
+        <p>
+            &copy; 2024 duanrA. 
+            Ce projet est sous <a href="https://opensource.org/licenses/MIT" target="_blank">licence MIT</a>.
+        </p>
+    </footer>
 </body>
-<footer style="text-align: center; margin-top: 20px; font-size: 12px; color: #666;">
-    <p>
-        &copy; 2024 duanrA. 
-        Ce projet est sous <a href="https://opensource.org/licenses/MIT" target="_blank">licence MIT</a>.
-    </p>
-</footer>
-
 </html>
