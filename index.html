@@ -45,11 +45,11 @@
             font-family: 'Montserrat', sans-serif;
         }
 
-        input {
+        input, select {
             width: 100%;
             padding: 8px;
             box-sizing: border-box;
-            border: 1px solid #F5F5F5;
+            border: 1px solid #DDD; /* Légèrement plus foncé pour plus de contraste */
             border-radius: 4px;
         }
 
@@ -79,14 +79,14 @@
                 width: 100%; /* Bouton prend toute la largeur sur mobile */
             }
 
-            input {
+            input, select {
                 font-size: 16px; /* Augmenter la taille de la police sur mobile */
             }
         }
     </style>
 </head>
 <body>
-    <h1>Inscription pour la Scène Ouverte</h1>
+    <h1>Inscription pour jouer chez nous !</h1>
     <form>
         <div>
             <label for="nom_groupe">
@@ -102,11 +102,13 @@
                 Style musical
             </label>
             <select id="style_musical" name="style_musical" required>
-                <option value="rock">Rock</option>
-                <option value="pop">Pop</option>
-                <option value="jazz">Jazz</option>
-                <option value="classique">Classique</option>
-                <option value="autre">Autre</option>
+                <option value="rock">Rock, Pop, Reggae, folk, métal</option>
+                <option value="chanson">Chanson</option>
+                <option value="jazz">Jazz et musique improvisée</option>
+                <option value="hiphop">Hip-hop</option>
+                <option value="electro">Musique électronique</option>
+                <option value="exp">Musique expérimentale</option>
+                <option value="classique">Musique classique</option>
             </select>
         </div>
     
@@ -117,7 +119,15 @@
             </label>
             <input type="email" id="email" name="email" required>
         </div>
-    
+
+        <div>
+            <label for="website">
+                <i class="fas fa-link" style="margin-right: 5px;"></i>
+                Lien du site web
+            </label>
+            <input type="url" id="website" name="website" placeholder="Ex : https://votregroupe.com" required>
+        </div>
+        
         <button type="submit">Envoyer</button>
     </form>
     
