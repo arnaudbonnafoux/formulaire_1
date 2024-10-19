@@ -12,15 +12,22 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
 
     <style>
+
         body {
-            background-color: #F5F5F5;
-            margin: 0;
-            padding: 20px;
-            font-family: 'Montserrat', sans-serif;
-        }
+        background-image: url('background_image_2.jpg'); /* Remplace par le chemin de ton image */
+        background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed; /* Fixe l'image de fond pour qu'elle reste en place lors du défilement */
+        margin: 0;
+        padding: 20px;
+        font-family: 'Montserrat', sans-serif;
+        min-height: 100vh; /* Assure que le fond couvre au moins la hauteur de l'écran */
+            }
+
 
         h1 {
-            color: #333;
+            color: #E11462;
             text-align: center;
             font-family: 'Montserrat', sans-serif;
         }
@@ -86,8 +93,8 @@
     </style>
 </head>
 <body>
-    <h1>Inscription pour jouer chez nous !</h1>
     <form>
+        <h1>Inscription pour jouer chez nous !</h1>
         <div>
             <label for="nom_groupe">
                 <i class="fas fa-users" style="margin-right: 5px;"></i>
