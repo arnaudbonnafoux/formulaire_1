@@ -1,6 +1,6 @@
-# Formulaire de Scène Ouverte
+# Formulaire
 
-Ce projet contient un formulaire destiné aux groupes de musique souhaitant participer à une scène ouverte. Les groupes peuvent s'inscrire en fournissant leur nom, leur style musical et leur adresse e-mail.
+Ce projet contient un formulaire destiné aux groupes de musique souhaitant être programmés dans une salle de concert. Les groupes peuvent s'inscrire en fournissant leur nom, leur style musical et leur adresse e-mail.
 
 ## Fonctionnalités
 
